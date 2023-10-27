@@ -1,4 +1,7 @@
-﻿namespace TaskAppMaui8
+﻿using TaskAppMaui8.Pages;
+
+
+namespace TaskAppMaui8
 {
     public partial class App : Application
     {
@@ -6,7 +9,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new MainTaskPage();
         }
     }
 }
