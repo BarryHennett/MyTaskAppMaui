@@ -10,6 +10,7 @@ namespace TaskAppMaui8
             InitializeComponent();
 
             MainPage = new MainTaskPage();
+
         }
     }
 }

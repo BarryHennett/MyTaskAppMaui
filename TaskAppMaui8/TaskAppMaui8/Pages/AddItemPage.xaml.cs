@@ -4,7 +4,11 @@ namespace TaskAppMaui8.Pages;
 
 public partial class AddItemPage : ContentPage
 {
-	public AddItemPage(AddTaskViewModel vm)
+    public AddItemPage()
+    {
+    }
+
+    public AddItemPage(AddTaskViewModel vm)
 	{
 		InitializeComponent();
 		BindingContext = vm;

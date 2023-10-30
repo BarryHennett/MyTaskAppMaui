@@ -1,3 +1,4 @@
+using TaskAppMaui8.Pages;
 namespace TaskAppMaui8.Pages;
 
 public partial class MainTaskPage : ContentPage
