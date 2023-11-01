@@ -2,61 +2,68 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TaskAppMaui8.Pages.MainTaskPage"
-             Title="NewPage1"
+             Title="TASK APP"
              BackgroundColor="White">
-
-    <VerticalStackLayout Padding="15" Spacing="5">
-        <Label Text="My Tasks" TextColor="DarkBlue" FontSize="25" FontAttributes="Bold"/>
-        <Label Text="CATAGORIES" TextColor="Gray" FontSize="15"/>
-
-        <Grid Margin="20" ColumnSpacing="10">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
+    <ScrollView>
+        <VerticalStackLayout Padding="15" Spacing="5">
 
 
 
-            <Frame Grid.Column="0">
-                <VerticalStackLayout>
-                    <Label Text="2 Tasks" FontSize="12" TextColor="Gray"/>
-                    <Label Text="Tutorials" FontSize="18" TextColor="Black" FontAttributes="Bold"/>
-                </VerticalStackLayout>
-            </Frame>
 
-            <Frame Grid.Column="1">
-                <VerticalStackLayout>
-                    <Label Text="2 Tasks" FontSize="12" TextColor="Gray"/>
-                    <Label Text="Shopping" FontSize="18" TextColor="Black" FontAttributes="Bold"/>
-                </VerticalStackLayout>
-            </Frame>
-        </Grid>
-        <Label Text="PENDING TASKS" TextColor="Gray" FontSize="15"/>
-            <Frame>
-                <ScrollView Orientation="Vertical">
-                    <ListView x:Name="TaskListView">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <ViewCell>
-                                    <StackLayout Orientation="Horizontal">
-                                        <CheckBox IsChecked="{Binding IsCompleted}" VerticalOptions="Center" />
-                                        <Label Text="{Binding Name}" VerticalOptions="Center" />
-                                    </StackLayout>
-                                </ViewCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
+            <!--This is for the different Categories and Types-->
+            <Label Text="TYPES" TextColor="DarkBlue" FontSize="25" FontAttributes="Bold"/>
+            <Grid Margin="20" ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <ScrollView >
+                    <Frame Grid.Column="0" >
+                        <VerticalStackLayout >
+                            <Label Text="Tutorials" FontSize="18" TextColor="Black" FontAttributes="Bold"/>
+
+                            <Label Text="Shopping" FontSize="18" TextColor="Black" FontAttributes="Bold"/>
+                        </VerticalStackLayout>
+                    </Frame>
                 </ScrollView>
-            </Frame>
-            <StackLayout Orientation="Vertical">
-                <Button x:Name="Adding" Clicked="Adding_Clicked"
-                        Text="+" 
-                        CornerRadius="20"
-                        WidthRequest="60"
-                        HeightRequest="60"
-                        VerticalOptions="End"    
-                        HorizontalOptions="End"
-                />
+ 
+            </Grid>
+
+            <!--Button Layout/Options-->
+            <StackLayout Padding="0,0,0,30">
+                <Button x:Name="Adding" Clicked="Adding_Clicked" Text="Add Type and Task"/>
             </StackLayout>
-    </VerticalStackLayout>
+
+            <!--This is for the Check Boxes For the tasks-->
+            <Label Text="PENDING TASKS" TextColor="Gray" FontSize="20"/>
+            <StackLayout Orientation="Vertical">
+                
+                    <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand">
+                        <CheckBox VerticalOptions="CenterAndExpand"/>
+                        <Label Text="Items" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                
+                    <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand">
+                        <CheckBox VerticalOptions="CenterAndExpand"/>
+                        <Label Text="Items 2" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                
+                    <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand">
+                        <CheckBox VerticalOptions="CenterAndExpand"/>
+                        <Label Text="Items 3" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                
+                    <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand">
+                        <CheckBox VerticalOptions="CenterAndExpand"/>
+                        <Label Text="Items 4" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </StackLayout>
+
+
+            
+            
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

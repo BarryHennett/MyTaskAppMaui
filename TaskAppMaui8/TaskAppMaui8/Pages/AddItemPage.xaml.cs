@@ -6,11 +6,6 @@ public partial class AddItemPage : ContentPage
 {
     public AddItemPage()
     {
+        InitializeComponent();
     }
-
-    public AddItemPage(AddTaskViewModel vm)
-	{
-		InitializeComponent();
-		BindingContext = vm;
-	}
 }

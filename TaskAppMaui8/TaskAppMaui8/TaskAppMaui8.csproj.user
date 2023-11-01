@@ -11,9 +11,6 @@
     <MauiXaml Update="App.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="AppShell.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
     <MauiXaml Update="Pages\AddItemPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

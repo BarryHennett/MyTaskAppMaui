@@ -1,6 +1,4 @@
 ﻿using TaskAppMaui8.Pages;
-
-
 namespace TaskAppMaui8
 {
     public partial class App : Application
@@ -9,8 +7,8 @@ namespace TaskAppMaui8
         {
             InitializeComponent();
 
-            MainPage = new MainTaskPage();
-
+            var navigationPage = new NavigationPage(new MainTaskPage());
+            MainPage = navigationPage;
         }
     }
 }

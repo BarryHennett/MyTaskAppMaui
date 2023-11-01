@@ -2,7 +2,23 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TaskAppMaui8.Pages.AddItemPage"
-             Title="AddItemPage"
-             BackgroundColor="Blue">
+             Title="ADD ITEMS"
+             BackgroundColor="White">
 
+    <VerticalStackLayout>
+        <Label HorizontalTextAlignment="Center" Text="Add Task"/>
+
+        <Frame>
+            <VerticalStackLayout>
+                <Label Text="Add A Category" FontSize="20" FontAttributes="Bold"/>
+                <RadioButton Content="Option 1"/>
+                <RadioButton Content="Option 2"/>
+                <RadioButton Content="Option 3"/>
+                <RadioButton Content="Option 4"/>
+            </VerticalStackLayout>
+        </Frame>
+
+
+
+    </VerticalStackLayout>
 </ContentPage>
